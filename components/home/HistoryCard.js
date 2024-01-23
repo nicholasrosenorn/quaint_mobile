@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { StyleSheet, ImageBackground, useColorScheme, Platform, Image, TouchableOpacity } from 'react-native';
-import { Ionicons, Entypo, Feather } from '@expo/vector-icons';
+import { Ionicons, Entypo, Feather, EvilIcons } from '@expo/vector-icons';
 
 import Colors from '../../constants/Colors';
 import { ExternalLink } from '../ExternalLink';
@@ -14,7 +14,10 @@ export default function HistoryCard({topic, date, textColor, backgroundPic}) {
 	<View style={styles.container}>
 		<View style={styles.historyCardRow}>
 			<View style={styles.timelineContainer}>
-					<Entypo name="flow-line" size={40} color="#9e9e9e" />
+					{/*<Entypo name="flow-line" size={35} color="#9e9e9e" />*/}
+					<Entypo name="dots-two-vertical" size={28} color="#9e9e9e" />
+					<Ionicons name="checkmark-circle-outline" size={28} color="#9e9e9e" />
+					<Entypo name="dots-two-vertical" size={28} color="#9e9e9e" />
 			</View>
 			<TouchableOpacity style={styles.historyCard}>
 				<ImageBackground source={backgroundPic} resizeMode="cover" style = {styles.imageContainer} imageStyle={styles.image}>	
@@ -36,13 +39,12 @@ const styles = StyleSheet.create({
 	container: {
 		width: '100%',
 		height: 80,
-
 	},
 	historyCardRow: {
 		flexDirection: 'row',
 		flex: 1,
 		justifyContent: 'center',
-
+		alignItems: 'center',
 	},
 	historyCard: {
 		borderRadius: 15,
@@ -50,6 +52,7 @@ const styles = StyleSheet.create({
 		flexDirection: 'row',
 		justifyContent: 'space-between',
 		marginBottom: 10,
+		height: 70,
 	},
 	timelineContainer: {
 		justifyContent: 'center',
@@ -58,6 +61,7 @@ const styles = StyleSheet.create({
 	},
 	HistoryCardTitle: {
 		backgroundColor: null,
+		justifyContent: 'flex-start',
 	},
 	HistoryCardTitleText: {
 		fontSize: 18,
@@ -84,7 +88,7 @@ const styles = StyleSheet.create({
 		justifyContent: 'space-between',
 	},
 	image: {
-		opacity: 0.28,
+		opacity: 0.15,
 		borderRadius: 15,
 	  },
 });

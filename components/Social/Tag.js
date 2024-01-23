@@ -7,12 +7,20 @@ import { ExternalLink } from '../ExternalLink';
 import { MonoText } from '../StyledText';
 import { Text, View } from '../Themed';
 
+function oppositeColor(colorScheme) {
+	if (colorScheme == 'light') {
+		return 'dark';
+	} else {
+		return 'light';
+	}
+}
 
 export default function Tag({tag}) {
-  const colorScheme = useColorScheme();
+  var colorScheme = useColorScheme();
+  colorScheme = oppositeColor(colorScheme);
   return (
 	<TouchableOpacity style={styles.container}>
-		<Text style={styles.TagText}>{tag}</Text>
+		<Text style={[styles.TagText, {color: Colors[colorScheme ?? 'light'].text}]}>{tag}</Text>
 	</TouchableOpacity>
   )
 }
@@ -28,6 +36,6 @@ const styles = StyleSheet.create({
 	},
 	TagText: {
 		fontSize: 12,
-		color: '#fff',
+		color: '#242424',
 	}
 });

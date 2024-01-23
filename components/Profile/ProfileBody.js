@@ -33,8 +33,10 @@ const styles = StyleSheet.create({
 		marginBottom: "3%",
 	},
 	BodyHeaderText: {
+		color: "#9e9e9e",
 		fontSize: 20,
-		fontWeight: 'bold',
+		textAlign: 'left',
+		fontWeight: '600',
 	},
 
 });

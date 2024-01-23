@@ -76,8 +76,10 @@ const styles = StyleSheet.create({
 	marginHorizontal: "5%",
   },
   VenturePageHeaderText: {
-	fontSize: 24,
-	fontWeight: 'bold',
+	color: "#9e9e9e",
+	fontSize: 20,
+	textAlign: 'left',
+	fontWeight: '600',
   },
   venturesRow: {
 	flexDirection: 'row',

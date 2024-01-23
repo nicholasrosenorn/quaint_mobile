@@ -5,6 +5,7 @@ import { Text, View, ScrollView } from '../../components/Themed';
 
 import HomeHeader from '../../components/home/HomeHeader';
 import HomeBody from '../../components/home/HomeBody';
+import HomeFooter from '../../components/home/HomeFooter';
 
 export default function Home() {
   const [isCompletedTask, setIsCompletedTask] = useState([false, false, false]);
@@ -14,6 +15,7 @@ export default function Home() {
     <ScrollView style={styles.container}>
       <HomeHeader/>
       <HomeBody />
+      <HomeFooter />
     </ScrollView>
   );
 
